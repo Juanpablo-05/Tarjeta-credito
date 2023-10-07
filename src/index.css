@@ -1,0 +1,111 @@
+*{
+  padding: 0;
+  margin: 0%;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+body{
+  background: #aaa;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container{
+  background: #eee;
+  border-radius: 12px;
+  height: 500px;
+  width: 400px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.container-input{
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.input-grups, .input-grup{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0;
+  position: relative;
+}
+
+.input-grups input, .input-grup input{
+  width: 90%;
+  padding: 8px;
+  border: none;
+  outline: none;
+  background: transparent;
+  border-bottom: 1px solid #000;
+}
+
+.container-grups{
+  width: 90%;
+  display: flex;
+  gap: 10px;
+}
+
+.container-grups .label{
+  width: 100%;
+}
+
+.container-grups input{
+  width: 150px;
+}
+
+.label{
+  width: 90%;
+  display: flex;
+  align-items: start;
+}
+
+.barra{
+  position: relative;
+  display: block;
+  width: 90%;
+}
+
+.input-grup .barra{
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+.barra::before{
+  content: "";
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  background: linear-gradient(to right, #b06ab3, #00a);
+  transition: .3s ease-in-out;
+}
+
+input:focus ~ .barra::before,
+input:valid ~ .barra::before{
+  width: 100%;
+}
+
+.btn-pagar{
+  padding: 11px 9px;
+  width: 60%;
+  background: rgb(8, 222, 54);
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  color: #fff;
+}
